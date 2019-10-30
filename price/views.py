@@ -3,7 +3,8 @@ from django.shortcuts import render
 # Create your views here.
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
-from .models import Category, Price
+from portfolio.models import Category
+from .models import  Price
 
 class PriceListView(ListView):
     model=Category

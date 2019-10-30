@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import Http404
 # Create your views here.
 from django.views.generic.list import ListView
@@ -10,7 +10,7 @@ class PortfolioListView(ListView):
     template_name='portfolio/index.html'
 
 def PortfolioDetailView(request, slug):
-   
-    category = Category.objects.get(slug=slug)
-    portfolio=Portfolio.objects.filter(category=category.id)
-    return render(request, 'portfolio/detail.html', {'category': category, 'portfolio':portfolio})
+
+        category = get_object_or_404(Category, slug=slug)
+        portfolio=Portfolio.objects.filter(category=category.id)
+        return render(request, 'portfolio/detail.html', {'category': category, 'portfolio':portfolio})
