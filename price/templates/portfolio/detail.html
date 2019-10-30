@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div id="colorlib-main">
+	<section class="ftco-section ftco-bread">
+		<div class="container">
+			<div class="row no-gutters slider-text justify-content-center align-items-center">
+				<div class="col-md-8 ftco-animate">
+					<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>price</span>
+					</p>
+
+					<h1 class="bread"> {{category}}</h1>
+					
+			
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row">
+				{% for p in portfolio %}
+				{{p.description | safe}}
+				{% endfor %}
+			</div>
+		</div>
+</section>
+
+
+</div><!-- END COLORLIB-MAIN -->
+</div><!-- END COLORLIB-PAGE -->
+{% endblock %}
