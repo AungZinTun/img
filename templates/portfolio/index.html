@@ -6,7 +6,7 @@
 		<div class="container">
 			<div class="row no-gutters slider-text justify-content-center align-items-center">
 				<div class="col-md-8 ftco-animate">
-					<p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>price</span>
+					<p class="breadcrumbs"><span class="mr-2"><a href="{% url 'portfolio:index' %}">Home</a></span> <span>Portfolio</span>
 					</p>
 					<h1 class="bread">Our Works</h1>
 				</div>
@@ -19,10 +19,10 @@
 				{% for p in object_list %}
 				<div class="col-md-4 ">
 					<a href="{% url 'portfolio:detail' p.slug %}"
-						class="photography-entry img  d-flex justify-content-start align-items-end"
+						class="photography-entry img-thumbnail img-fluid img  d-flex justify-content-start align-items-end"
 						style="background-image: url(media/{{p.photo}});">
 						<div class="overlay"></div>
-						<div class="btn btn-info text ml-4 mb-4">
+						<div class="caption  btn btn-light ml-4 mb-4">
 							<h3>{{p.name}}</h2>
 						</div>
 					</a>
