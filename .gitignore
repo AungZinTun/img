@@ -1,6 +1,7 @@
 DS_Store
 *.sqlite3
-media/
 *.pyc
 *.db
 *.pid
+*.sqlite3
+media/
