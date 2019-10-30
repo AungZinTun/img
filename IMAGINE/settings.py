@@ -97,11 +97,11 @@ else:
     DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'fotoedu',
-        'USER': 'root',
-        'PASSWORD': 'admin@1234',
-        'HOST': 'localhost',
-        'PORT': '',
+        'NAME': 'd6v9cis68ovhko',
+        'USER': 'meuxslhlyymhiz',
+        'PASSWORD': '7efa78869f2de8718af5f2ec495ed5929ff083bd1655b9ee5bcd4a614deed1ac',
+        'HOST': 'ec2-54-243-44-102.compute-1.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
