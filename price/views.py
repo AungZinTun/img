@@ -10,9 +10,8 @@ class PriceListView(ListView):
     template_name='price/index.html'
 
 def PriceDetailView(request, slug):
-    try:
-        category = Category.objects.get(slug=slug)
-        price=Price.objects.filter(category=category.id)
-    except Category.DoesNotExist:
-        raise Http404("Post does not exist")
+
+    category = Category.objects.get(slug=slug)
+    price=Price.objects.filter(category=category.id)
+   
     return render(request, 'price/detail.html', {'category': category, 'price':price})

@@ -10,9 +10,7 @@ class PortfolioListView(ListView):
     template_name='Portfolio/index.html'
 
 def PortfolioDetailView(request, slug):
-    try:
-        category = Category.objects.get(slug=slug)
-        portfolio=Portfolio.objects.filter(category=category.id)
-    except Category.DoesNotExist:
-        raise Http404("Category does not exist")
+   
+    category = Category.objects.get(slug=slug)
+    portfolio=Portfolio.objects.filter(category=category.id)
     return render(request, 'Portfolio/detail.html', {'category': category, 'portfolio':portfolio})
